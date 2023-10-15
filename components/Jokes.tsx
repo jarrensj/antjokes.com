@@ -10,6 +10,42 @@ const jokes = [
     question: 'what do you call a smart ant?',
     answer: 'brilli-ant',
   },
+  {
+    question: 'what do you call a nice ant?',
+    answer: 'pleas-ant',
+  },
+  {
+    question: 'what do you call a fancy ant?',
+    answer: 'eleg-ant',
+  },
+  {
+    question: 'what do you call an old ant?',
+    answer: 'ant-ique',
+  },
+  {
+    question: 'what do you call a trusted ant?',
+    answer: 'reli-ant',
+  },
+  {
+    question: 'what do you call a fast ant?',
+    answer: 'inst-ant',
+  },
+  {
+    question: 'what do you call an ant that is far away?',
+    answer: 'dist-ant',
+  },
+  {
+    question: 'what do you call a baby ant?',
+    answer: 'inf-ant',
+  },
+  {
+    question: 'what do you call a dirty ant?',
+    answer: 'contamin-ant',
+  },
+  {
+    question: 'what do you call a birthday ant?',
+    answer: 'celebr-ant',
+  }
 ]
 
 const Jokes = () => {
