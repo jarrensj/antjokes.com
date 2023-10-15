@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import AntClick from '../components/AntClick'
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <p>
         what do you call a smart ant? brilli-ant
       </p>
+      <AntClick />
     </main>
   )
 }
