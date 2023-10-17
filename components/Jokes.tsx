@@ -45,7 +45,11 @@ const jokes = [
   {
     question: 'what do you call a birthday ant?',
     answer: 'celebr-ant',
-  }
+  },
+  {
+    question: 'what do you call a clean ant?',
+    answer: 'disinfect-ant',
+  },
 ]
 
 const Jokes = () => {
