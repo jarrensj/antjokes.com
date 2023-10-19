@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const jokes = [
   {
@@ -17,6 +18,7 @@ const jokes = [
   {
     question: 'what do you call a fancy ant?',
     answer: 'eleg-ant',
+    image: 'eleg-ant.png'
   },
   {
     question: 'what do you call an old ant?',
@@ -25,6 +27,7 @@ const jokes = [
   {
     question: 'what do you call a trusted ant?',
     answer: 'reli-ant',
+    image: ''
   },
   {
     question: 'what do you call a fast ant?',
@@ -70,7 +73,11 @@ const Jokes = () => {
             {item.question}
           </div>
           {activeIndex === index && (
-            <div style={{ marginTop: '10px', marginLeft: '20px' }}>{item.answer}</div>
+            <div style={{ marginTop: '10px', marginLeft: '20px' }}>
+              {item.answer}
+              { item.image ? <Image src={`/${item.image}`} alt={`image ${item.answer}`} width={250} height={250} /> : null }
+              
+            </div>
           )}
         </div>
       ))}
