@@ -53,6 +53,46 @@ const jokes = [
     question: 'what do you call a clean ant?',
     answer: 'disinfect-ant',
   },
+  {
+    question: 'what do you call a bossy ant?',
+    answer: 'tyr-ant',
+  },
+  {
+    question: 'what do you call a poor ant?',
+    answer: 'peas-ant',
+  },
+  {
+    question: 'what do you call a repetitive ant?',
+    answer: 'redund-ant',
+  },
+  {
+    question: 'what do you call an ant that never changes?',
+    answer: 'const-ant'
+  },
+  {
+    question: 'what do you call a different type of ant?',
+    answer: 'vari-ant',
+  },
+  {
+    question: 'what do you call an ant that fights stuff in the body?',
+    answer: 'ant-ibody',
+  },
+  {
+    question: 'what do you call an ant that is valued?',
+    answer: 'import-ant',
+  },
+  {
+    question: 'what do you call an ant that lives somewhere?',
+    answer: 'habit-ant',
+  },
+  { 
+    question: 'what do you call a shiny ant?',
+    answer: 'radi-ant',
+  },
+  {
+    question: 'what do you call an annoying ant?',
+    answer: 'irrit-ant',
+  }
 ]
 
 const Jokes = () => {
