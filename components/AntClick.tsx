@@ -1,6 +1,6 @@
-"use client"
+'use client'
 
-import React, { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import JSConfetti from 'js-confetti'; 
 
 const AntClick = () => {
@@ -21,13 +21,8 @@ const AntClick = () => {
       document.removeEventListener('click', handleOnClick);
     };
   }, []);
-
   
-
-  return (
-      <>
-      </>
-  );
+  return null;
 };
 
 export default AntClick;
