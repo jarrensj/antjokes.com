@@ -1,8 +1,15 @@
-"use client"
+'use client'
+
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-const jokes = [
+interface Joke {
+  question: string;
+  answer: string;
+  image?: string;
+}
+
+const jokes: Joke[] = [
   {
     question: 'what do you call a big ant?',
     answer: 'a gi-ant',
@@ -95,7 +102,7 @@ const jokes = [
   }
 ]
 
-const Jokes = () => {
+const Jokes: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const handleToggle = (index: number) => {
