@@ -11,7 +11,7 @@ export default function Home() {
           ant jokes
         </h1>
         <p className="mt-2 text-base text-center text-gray-600">
-          Click the question to see the answer
+          Jokes about ants! Click the question to reveal the answer.
         </p>
         <div className="mt-2">
           <Jokes />
