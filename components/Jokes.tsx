@@ -110,20 +110,23 @@ const Jokes: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="p-5">
       {jokes.map((item, index) => (
-        <div key={index} style={{ marginBottom: '15px' }}>
+        <div key={index} className="mb-4 p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
           <div
             onClick={() => handleToggle(index)}
-            style={{ cursor: 'pointer', fontWeight: 'bold' }}
+            className="cursor-pointer font-semibold text-lg text-gray-800 hover:text-gray-600"
           >
             {item.question}
           </div>
           {activeIndex === index && (
-            <div style={{ marginTop: '10px', marginLeft: '20px' }}>
+            <div className="mt-2 ml-5 text-gray-700">
               {item.answer}
-              { item.image ? <Image src={`/${item.image}`} alt={`image ${item.answer}`} width={250} height={250} /> : null }
-              
+              {item.image && (
+                <div className="mt-2">
+                  <Image src={`/${item.image}`} alt={`image of ${item.answer}`} width={250} height={250} className="mx-auto" />
+                </div>
+              )}
             </div>
           )}
         </div>
