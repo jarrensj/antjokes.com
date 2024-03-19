@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import AntClick from '../components/AntClick';
 import Jokes from '../components/Jokes';
 import Footer from '../components/Footer';
