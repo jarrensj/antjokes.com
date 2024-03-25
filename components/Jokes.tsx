@@ -127,6 +127,11 @@ const jokes: Joke[] = [
     question: 'what do you call an ant that is unsure?',
     answer: 'hesit-ant',
     keywords: 'unsure'
+  },
+  {
+    question: 'what do you call an ant that likes math?',
+    answer: 'account-ant',
+    keywords: 'likes math'
   }
 ]
 
