@@ -137,7 +137,12 @@ const jokes: Joke[] = [
     question: 'what do you call a chill ant?',
     answer: 'nonchal-ant',
     keywords: 'chill'
-  }
+  },
+  {
+    question: 'what do you call an ant that partakes?",
+    answer: 'particip-ant',
+    keywords: 'that partakes'
+   }
 ]
 
 const Jokes: React.FC = () => {
