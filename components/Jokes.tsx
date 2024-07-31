@@ -12,13 +12,20 @@ interface Joke {
 
 const Jokes: React.FC = () => {
   const [jokes, setJokes] = useState<Joke[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const fetchJokes = async () => {
-      const response = await fetch('/api/jokes');
-      const data = await response.json();
-      setJokes(data);
+      try {
+        const response = await fetch('/api/jokes');
+        const data = await response.json();
+        setJokes(data);
+      } catch (error) {
+        console.error('Failed to fetch jokes:', error);
+      } finally {
+        setLoading(false);
+      }
     };
     fetchJokes();
   }, []);
@@ -48,26 +55,30 @@ const Jokes: React.FC = () => {
 
   return (
     <div className="p-5">
-      {jokes.map((item, index) => (
-        <div key={index} className="mb-4 p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-          <div
-            onClick={() => handleToggle(index)}
-            className="cursor-pointer font-semibold text-lg text-gray-800 hover:text-gray-600"
-          >
-            {highlightKeywords(item.question, item.keywords)}
-          </div>
-          {activeIndex === index && (
-            <div className="mt-2 ml-5 text-gray-700">
-              <p>{item.answer}</p>
-              {item.image && (
-                <div className="mt-2 flex justify-center">
-                  <Image src={`/${item.image}`} alt={`image of ${item.answer}`} width={250} height={250} />
-                </div>
-              )}
+      {loading ? (
+        <div className="text-center text-gray-600">Loading...</div>
+      ) : (
+        jokes.map((item, index) => (
+          <div key={index} className="mb-4 p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div
+              onClick={() => handleToggle(index)}
+              className="cursor-pointer font-semibold text-lg text-gray-800 hover:text-gray-600"
+            >
+              {highlightKeywords(item.question, item.keywords)}
             </div>
-          )}
-        </div>
-      ))}
+            {activeIndex === index && (
+              <div className="mt-2 ml-5 text-gray-700">
+                <p>{item.answer}</p>
+                {item.image && (
+                  <div className="mt-2 flex justify-center">
+                    <Image src={`/${item.image}`} alt={`image of ${item.answer}`} width={250} height={250} />
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+        ))
+      )}
     </div>
   );
 };
