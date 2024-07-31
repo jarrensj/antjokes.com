@@ -141,7 +141,7 @@ const jokes: Joke[] = [
   {
     question: 'what do you call an ant that participates?',
     answer: 'particip-ant',
-    keywords: 'that partakes'
+    keywords: 'that participates'
   }
 ]
 
